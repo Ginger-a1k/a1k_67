@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing Exam Notes - Part B & C</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation styles */
+        .nav-container {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .nav-title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+        }
+        
+        .nav-btn:hover {
+            background-color: #2c3e50;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-color: white;
+        }
+        
+        .nav-btn.active {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        /* Header styles */
+        .part-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .part-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .part-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Question container */
+        .question {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .question:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        
+        .question h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        /* Section styles */
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Content styling */
+        strong {
+            color: #e74c3c;
+        }
+        
+        p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        /* Lists */
+        ol, ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        ul li {
+            list-style-type: none;
+            position: relative;
+        }
+        
+        ul li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Code inline */
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #856404;
+            font-weight: bold;
+        }
+        
+        .example-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .example-box strong {
+            color: #2e7d32;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .nav-container {
+                padding: 15px;
+            }
+            
+            .nav-title {
+                font-size: 1.1rem;
+            }
+            
+            .nav-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+            
+            .part-header {
+                padding: 15px;
+            }
+            
+            .part-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .question {
+                padding: 20px;
+            }
+            
+            .question h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .nav-container {
+                padding: 12px;
+            }
+            
+            .nav-title {
+                font-size: 1rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .part-header {
+                padding: 12px;
+            }
+            
+            .part-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .question {
+                padding: 15px;
+            }
+            
+            .question h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+            
+            ol, ul {
+                margin-left: 15px;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            
+            .nav-container {
+                background: linear-gradient(135deg, #1a5276, #1c2833);
+            }
+            
+            .nav-btn {
+                background-color: #2c3e50;
+                color: #e0e0e0;
+            }
+            
+            .nav-btn:hover {
+                background-color: #e74c3c;
+            }
+            
+            .part-header {
+                background: linear-gradient(135deg, #4a0e8f 0%, #1a5276 100%);
+            }
+            
+            .question {
+                background-color: #1e1e1e;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            }
+            
+            .question h2 {
+                color: #79c0ff;
+            }
+            
+            p {
+                color: #b0b0b0;
+            }
+            
+            code {
+                background-color: #2d2d2d;
+                color: #ff7b72;
+            }
+            
+            .highlight {
+                background-color: #3d2c00;
+                color: #ffd700;
+            }
+            
+            .example-box {
+                background-color: #1a2e1a;
+                border-left-color: #4caf50;
+            }
+            
+            .example-box strong {
+                color: #81c784;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="nav-title">Video Editing Exam Notes</div>
+        <div class="nav-buttons">
+            <a href="#" class="nav-btn active">PART B & C</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="part-header">
+        <h1>PART B & C - Video Editing Exam Notes</h1>
+        <p>New Media Challenges, Text Legibility & CTML Principles</p>
+    </div>
+
+    <!-- PART B -->
+    <div class="question">
+        <h2>PART B - Q1: New Media Challenges (10 marks)</h2>
+        
+        <div class="section">
+            <div class="section-title">1. Information Overload</div>
+            <p>Excessive amount of content makes it difficult for users to find relevant information.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Social media feeds with endless scrolling (Facebook, Twitter) where users struggle to filter important content from noise.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">2. Attention Span Reduction</div>
+            <p>Digital media consumption has shortened user attention spans, requiring quick, engaging content.</p>
+            <div class="example-box">
+                <strong>Example:</strong> TikTok and Instagram Reels succeed with 15-60 second videos, while longer content struggles to retain viewers.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">3. Platform Fragmentation</div>
+            <p>Content must be adapted for multiple platforms with different formats and requirements.</p>
+            <div class="example-box">
+                <strong>Example:</strong> A video needs vertical format for TikTok (9:16), square for Instagram (1:1), and horizontal for YouTube (16:9).
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">4. Rapid Technological Change</div>
+            <p>New tools, formats, and platforms emerge constantly, requiring continuous learning.</p>
+            <div class="example-box">
+                <strong>Example:</strong> The shift from SD to HD to 4K to 8K video; emergence of VR/AR content and AI-powered editing tools.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">5. Credibility and Misinformation</div>
+            <p>Easy content creation and sharing has led to spread of fake news and manipulated media.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Deepfake videos and AI-generated content that can convincingly mimic real people and events.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">6. Monetization Pressure</div>
+            <p>Content creators face challenges in generating sustainable income from their work.</p>
+            <div class="example-box">
+                <strong>Example:</strong> YouTube's changing ad revenue policies and demonetization affecting content creators' earnings.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">7. Copyright and Intellectual Property</div>
+            <p>Digital media makes it easy to copy and redistribute content without permission.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Music and video content being re-uploaded without licenses, leading to copyright strikes and legal issues.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">8. Privacy and Data Security</div>
+            <p>New media platforms collect vast amounts of user data, raising privacy concerns.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Social media apps tracking user behavior, location, and personal information for targeted advertising.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">9. Digital Divide and Accessibility</div>
+            <p>Not everyone has equal access to technology and high-speed internet.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Rural areas with limited broadband access struggle to stream high-quality video content or participate in online learning.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">10. Algorithm Dependency</div>
+            <p>Content visibility depends heavily on platform algorithms, limiting organic reach.</p>
+            <div class="example-box">
+                <strong>Example:</strong> Instagram and Facebook algorithms prioritize engagement over chronological order, making it harder for new creators to gain visibility.
+            </div>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h2>Q2: 4 Factors of Text Legibility</h2>
+        
+        <div class="section">
+            <div class="section-title">1. Font Choice and Typography</div>
+            <p>The typeface selection significantly impacts readability.</p>
+            <ul>
+                <li><strong>Sans-serif fonts</strong> (Arial, Helvetica) are better for screens</li>
+                <li><strong>Serif fonts</strong> (Times New Roman) work well for print</li>
+                <li>Avoid overly decorative or script fonts for body text</li>
+                <li>Maintain consistent font family throughout</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">2. Size and Spacing</div>
+            <p>Proper sizing and spacing ensure comfortable reading.</p>
+            <ul>
+                <li><strong>Font size:</strong> Minimum 16px for body text on screens</li>
+                <li><strong>Line height:</strong> 1.5 to 1.6 times the font size</li>
+                <li><strong>Letter spacing:</strong> Adequate space between characters</li>
+                <li><strong>Paragraph spacing:</strong> Clear separation between blocks</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">3. Contrast and Color</div>
+            <p>Sufficient contrast between text and background is essential.</p>
+            <ul>
+                <li><strong>High contrast:</strong> Dark text on light background (or vice versa)</li>
+                <li><strong>WCAG standards:</strong> Minimum 4.5:1 ratio for normal text</li>
+                <li>Avoid bright colors that strain eyes</li>
+                <li>Consider colorblind users (don't rely on color alone)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">4. Text Length and Alignment</div>
+            <p>Line length and alignment affect reading flow.</p>
+            <ul>
+                <li><strong>Line length:</strong> 50-75 characters per line for optimal reading</li>
+                <li><strong>Alignment:</strong> Left-aligned for Western languages (easier to read)</li>
+                <li>Avoid justified text on screens (creates uneven spacing)</li>
+                <li>Break long content into shorter paragraphs</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h2>Q3: 3 Benefits of Video Editing Software</h2>
+        
+        <div class="section">
+            <div class="section-title">1. Creative Control and Flexibility</div>
+            <p>Video editing software provides extensive tools for creative expression.</p>
+            <ul>
+                <li><strong>Multiple editing options:</strong> Cut, trim, split, merge clips easily</li>
+                <li><strong>Effects and transitions:</strong> Add professional-looking effects</li>
+                <li><strong>Color grading:</strong> Adjust colors, brightness, and contrast</li>
+                <li><strong>Audio control:</strong> Mix, balance, and enhance sound</li>
+                <li><strong>Non-destructive editing:</strong> Make changes without altering original files</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">2. Time and Cost Efficiency</div>
+            <p>Modern software streamlines the editing process and reduces costs.</p>
+            <ul>
+                <li><strong>Faster workflow:</strong> Automated tools and shortcuts save time</li>
+                <li><strong>Templates and presets:</strong> Quick application of common styles</li>
+                <li><strong>Cost-effective:</strong> Eliminates need for expensive hardware studios</li>
+                <li><strong>Batch processing:</strong> Apply effects to multiple clips simultaneously</li>
+                <li><strong>Instant preview:</strong> See changes in real-time before rendering</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">3. Professional Quality Output</div>
+            <p>Achieve broadcast-quality results with advanced features.</p>
+            <ul>
+                <li><strong>High-resolution support:</strong> Edit 4K, 8K, and HDR content</li>
+                <li><strong>Multi-format export:</strong> Output for different platforms and devices</li>
+                <li><strong>Advanced features:</strong> Motion tracking, chroma keying, stabilization</li>
+                <li><strong>Integration:</strong> Works with other creative software (After Effects, Photoshop)</li>
+                <li><strong>Collaboration tools:</strong> Share projects and work with teams remotely</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PART C -->
+    <div class="question">
+        <h2>PART C - Principles of CTML (Cognitive Theory of Multimedia Learning) (20 marks)</h2>
+        
+        <div class="section">
+            <div class="section-title">1. Multimedia Principle</div>
+            <p>People learn better from words and pictures together than from words alone.</p>
+            <ul>
+                <li>Combine narration with relevant visuals</li>
+                <li>Use diagrams, animations, and images to support text</li>
+                <li>Dual-channel processing enhances understanding</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> A science lesson showing both animated diagrams of the water cycle AND verbal explanation is more effective than text alone.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">2. Contiguity Principle (Spatial & Temporal)</div>
+            <p>Related words and pictures should be presented near each other in space and time.</p>
+            <ul>
+                <li><strong>Spatial:</strong> Place text labels close to corresponding graphics</li>
+                <li><strong>Temporal:</strong> Present narration and animation simultaneously</li>
+                <li>Reduces cognitive load by eliminating search time</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> In a tutorial video, show the action on screen while describing it, rather than explaining first then showing later.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">3. Modality Principle</div>
+            <p>Use spoken narration rather than on-screen text when presenting graphics or animations.</p>
+            <ul>
+                <li>Audio narration + visuals work better than text + visuals</li>
+                <li>Prevents overload of visual channel</li>
+                <li>Allows learners to process information through both channels</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> An instructional video uses voiceover to explain a process while showing visual demonstration, instead of displaying text paragraphs on screen.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">4. Redundancy Principle</div>
+            <p>Don't present the same information in multiple formats simultaneously if it creates overload.</p>
+            <ul>
+                <li>Avoid presenting identical spoken narration and on-screen text together</li>
+                <li>Choose either audio OR text, not both with same content</li>
+                <li>Exception: Captions are acceptable for accessibility</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Don't show text on screen that exactly matches the voiceover word-for-word; this creates cognitive overload.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">5. Coherence Principle</div>
+            <p>Exclude extraneous material that doesn't support the learning objective.</p>
+            <ul>
+                <li>Remove decorative images and unnecessary sounds</li>
+                <li>Avoid interesting but irrelevant information</li>
+                <li>Keep content focused and concise</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Remove background music, decorative animations, or fun facts that distract from the core lesson content.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">6. Personalization Principle</div>
+            <p>Use conversational style and direct address to engage learners.</p>
+            <ul>
+                <li>Use "you" and "your" instead of "one" or "the learner"</li>
+                <li>Adopt friendly, conversational tone</li>
+                <li>Creates social presence and increases engagement</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Say "You will learn how to edit videos" instead of "The learner will learn how to edit videos."
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">7. Segmenting Principle</div>
+            <p>Break complex content into smaller, manageable segments.</p>
+            <ul>
+                <li>Divide lessons into bite-sized chunks</li>
+                <li>Allow learner control over pacing</li>
+                <li>Provide clear breaks between segments</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> A 30-minute tutorial is broken into six 5-minute chapters that users can complete at their own pace.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">8. Pre-training Principle</div>
+            <p>Introduce key concepts and terminology before presenting complex material.</p>
+            <ul>
+                <li>Provide overview of main components first</li>
+                <li>Define important terms upfront</li>
+                <li>Build foundation before adding complexity</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Before teaching video editing techniques, first explain basic terms like "timeline," "clip," "transition," and "render."
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">9. Signaling Principle</div>
+            <p>Highlight essential information to guide attention.</p>
+            <ul>
+                <li>Use highlighting, arrows, or animations to emphasize key points</li>
+                <li>Provide clear headings and organizational cues</li>
+                <li>Direct attention to important elements</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Use a red circle or arrow to point out specific buttons or features in a software tutorial video.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">10. Voice Principle</div>
+            <p>Use human voice rather than machine-generated voice for narration.</p>
+            <ul>
+                <li>Human voice creates social presence</li>
+                <li>Increases learner engagement and motivation</li>
+                <li>More natural and easier to understand</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example:</strong> Record narration with a real person rather than using text-to-speech or robotic AI voice.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.question').forEach(question => {
+            question.style.opacity = '0';
+            question.style.transform = 'translateY(20px)';
+            question.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(question);
+        });
+    </script>
+</body>
+</html>
